@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+    Новости о астралогии
+{% endblock %}
+
+{% block content %}
+
+    <div class = "features">
+            <h1>Новости по астрологии</h1>
+
+            {% for el in newsS %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{ el.anons }}</p>
+                    <p class="ptext">{{ el.full_text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}
